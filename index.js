@@ -1,5 +1,8 @@
-const fetchCoordsByIP = require('./iss.js');
+const {fetchCoordsByIP ,fetchISSFlyOverTimes, nextISSTimesForMyLocation, fetchMyIP, printPastTimes } = require('./iss.js');
 
-fetchCoordsByIP("99.229.161.197", (error, body) => {
-  console.log(body);
+
+
+nextISSTimesForMyLocation((body) => {
+  printPastTimes(body);
 })
+
